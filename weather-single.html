@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Weather Widget</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Uncomment the code of only one section at a time(the other section's code must remain commented) -->
+
+	<!--Section: To show single widget on the page -->
+		
+		<!-- <weather-widget data-obj='{"city":"fairfax","region":"va"}'></weather-widget> -->
+
+
+	<!--Section2: To show two widgets parallely on the page -->
+		
+		<div class="sec1">
+			<weather-widget data-obj='{"city":"dallas","region":"tx","onRequestFail":"<h5>Oops! Request Failed.<br />Please try again.</h5>"}'></weather-widget>
+		</div>
+		<div class="sec2">
+			<weather-widget data-obj='{"city":"fairfax","region":"va"}'></weather-widget>
+		</div>
+
+	<!-- Fetch polyfill for IE -->
+	<script type="text/javascript" src="fetch.min.js"></script>
+
+	<!-- Custom Elements polyfill for IE & Mozilla -->
+	<script type="text/javascript" src="document-register-element.min.js"></script>
+
+	<!-- Script for weather widget logic(My Script) -->
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
